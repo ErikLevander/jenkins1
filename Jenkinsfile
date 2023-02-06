@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('install') {
       steps {
-        sh 'pip install autopep8'
+        sh 'pip install autopep8 pylint'
       }
     }
 
