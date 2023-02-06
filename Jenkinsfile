@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('autopep') {
-      steps {
-        sh 'python3 -m autopep8 --diff ./src/main.py'
+      parallel {
+        stage('autopep') {
+          steps {
+            sh 'python3 -m autopep8 --diff ./src/main.py'
+          }
+        }
+
+        stage('pylint') {
+          steps {
+            sh 'python3 -m pylint ./src/'
+          }
+        }
+
       }
     }
 
