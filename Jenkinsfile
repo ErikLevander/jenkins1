@@ -2,8 +2,19 @@ pipeline {
   agent any
   stages {
     stage('install') {
-      steps {
-        sh 'pip install autopep8 pylint'
+      parallel {
+        stage('install') {
+          steps {
+            sh 'pip install autopep8 pylint'
+          }
+        }
+
+        stage('req') {
+          steps {
+            sh 'python3 -m pip install -r requirements '
+          }
+        }
+
       }
     }
 
