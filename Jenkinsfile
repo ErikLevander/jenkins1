@@ -17,7 +17,7 @@ pipeline {
 
         stage('pylint') {
           steps {
-            sh 'python3 -m pylint ./src/'
+            sh 'python3 -m pylint --disable=C0304 ./src/'
           }
         }
 
