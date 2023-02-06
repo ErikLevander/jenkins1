@@ -6,3 +6,6 @@ print('bajsar')
 k = 'hej'
 # print(k)
 
+'''
+vafan nu då
+'''
