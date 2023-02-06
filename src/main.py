@@ -1,2 +1,2 @@
 print('bajsar')
-print k
+#print k
