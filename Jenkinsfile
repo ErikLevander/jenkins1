@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('error') {
+    stage('autopep') {
       steps {
         sh 'python3 -m autopep8 --diff ./src/main.py'
       }
