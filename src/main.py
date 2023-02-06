@@ -1,2 +1,3 @@
 print('bajsar')
-#print k
+k = 'hej'
+#print(k)
